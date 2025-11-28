@@ -52,6 +52,15 @@
             font-size: 1.5rem;
             font-weight: 800;
             color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        nav .logo-img {
+            height: 2rem;
+            width: auto;
+            display: block;
         }
 
         nav ul {
@@ -2976,5 +2985,238 @@
             .business-info-item {
                 flex-direction: column;
                 gap: 0.25rem;
+            }
+        }
+
+        /* Case Study Popup Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .case-study-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case-study-popup.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .case-study-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text);
+            transition: all 0.3s ease;
+            z-index: 10;
+            padding: 0;
+        }
+
+        .case-study-close i,
+        .case-study-close .fas {
+            pointer-events: none;
+        }
+
+        .case-study-close:hover {
+            background: var(--accent);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .case-study-close:active {
+            transform: rotate(90deg) scale(0.95);
+        }
+
+        .case-study-content {
+            padding: 2.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .case-study-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .case-study-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .case-study-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .case-study-badge .badge-icon {
+            font-size: 1rem;
+        }
+
+        .case-study-body {
+            margin-bottom: 2rem;
+        }
+
+        .case-study-section {
+            margin-bottom: 2rem;
+        }
+
+        .case-study-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .case-study-company,
+        .case-study-challenge,
+        .case-study-solution,
+        .case-study-timeline {
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .case-study-company {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .case-study-results {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .case-study-results li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .case-study-results .result-icon {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .case-study-footer {
+            padding-top: 2rem;
+            border-top: 2px solid var(--light);
+            text-align: center;
+        }
+
+        .case-study-cta {
+            margin-bottom: 1rem;
+        }
+
+        .case-study-footer-text {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Responsive Popup */
+        @media (max-width: 768px) {
+            .case-study-popup {
+                width: 95%;
+                max-height: 95vh;
+                border-radius: 15px;
+            }
+
+            .case-study-content {
+                padding: 1.5rem;
+            }
+
+            .case-study-title {
+                font-size: 1.5rem;
+            }
+
+            .case-study-close {
+                top: 1rem;
+                right: 1rem;
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .case-study-company,
+            .case-study-challenge,
+            .case-study-solution,
+            .case-study-timeline {
+                font-size: 0.95rem;
             }
         }

@@ -28,6 +28,7 @@
             <ul>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#process">Process</a></li>
+                <li><a href="#trends">Trends</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -853,6 +854,54 @@
         </div>
     </section>
 
+    <!-- Design Trends Section -->
+    <section class="trends" id="trends">
+        <div class="container">
+            <div class="section-header">
+                <div class="trends-badge">
+                    <span class="badge-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="badge-text">Latest Trends</span>
+                </div>
+                <h2>Design Trends <span class="highlight-trends">We're Following</span></h2>
+                <p>Stay updated with the latest design trends and insights from the industry. We monitor trends from Behance, Dribbble, and other leading design platforms.</p>
+                
+                <!-- Auto-refresh indicator -->
+                <div class="trends-refresh-info">
+                    <span class="refresh-icon"><i class="fas fa-sync-alt"></i></span>
+                    <span class="refresh-text">Auto-updates every 30 minutes</span>
+                    <button id="refreshTrendsBtn" class="refresh-btn" title="Refresh trends now">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Loading state -->
+            <div id="trendsLoading" class="trends-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading design trends...</p>
+            </div>
+            
+            <!-- Error state -->
+            <div id="trendsError" class="trends-error" style="display: none;">
+                <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <h3>Unable to load trends</h3>
+                <p>Please check your connection or try again later.</p>
+                <button onclick="loadTrends()" class="btn btn-secondary">Retry</button>
+            </div>
+            
+            <!-- Trends grid -->
+            <div id="trendsGrid" class="trends-grid" style="display: none;">
+                <!-- Trends will be inserted here by JavaScript -->
+            </div>
+            
+            <!-- Empty state -->
+            <div id="trendsEmpty" class="trends-empty" style="display: none;">
+                <div class="empty-icon"><i class="fas fa-inbox"></i></div>
+                <p>No trends available at the moment.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section (FBM: Ability + Prompts) -->
     <section class="cta" id="contact">
         <div class="container">
@@ -1578,6 +1627,178 @@
         } else {
             setupPopupCloseHandlers();
         }
+
+        // Design Trends Integration
+        const TRENDS_API_URL = 'http://localhost:8000/api/trends'; // Change to your API URL
+        const TRENDS_REFRESH_INTERVAL = 30 * 60 * 1000; // 30 minutes
+        let trendsRefreshTimer = null;
+
+        // Load trends from API
+        async function loadTrends() {
+            const loadingEl = document.getElementById('trendsLoading');
+            const errorEl = document.getElementById('trendsError');
+            const gridEl = document.getElementById('trendsGrid');
+            const emptyEl = document.getElementById('trendsEmpty');
+            const refreshBtn = document.getElementById('refreshTrendsBtn');
+
+            // Show loading state
+            loadingEl.style.display = 'block';
+            errorEl.style.display = 'none';
+            gridEl.style.display = 'none';
+            emptyEl.style.display = 'none';
+            
+            if (refreshBtn) {
+                refreshBtn.disabled = true;
+                refreshBtn.querySelector('i').classList.add('fa-spin');
+            }
+
+            try {
+                // Fetch trends (English version)
+                const response = await fetch(`${TRENDS_API_URL}?lang=en&limit=6`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const trends = await response.json();
+                
+                if (!trends || trends.length === 0) {
+                    // Show empty state
+                    loadingEl.style.display = 'none';
+                    emptyEl.style.display = 'block';
+                    return;
+                }
+
+                // Render trends
+                renderTrends(trends);
+                
+                // Hide loading, show grid
+                loadingEl.style.display = 'none';
+                gridEl.style.display = 'grid';
+                
+            } catch (error) {
+                console.error('Error loading trends:', error);
+                loadingEl.style.display = 'none';
+                errorEl.style.display = 'block';
+            } finally {
+                if (refreshBtn) {
+                    refreshBtn.disabled = false;
+                    refreshBtn.querySelector('i').classList.remove('fa-spin');
+                }
+            }
+        }
+
+        // Render trends to grid
+        function renderTrends(trends) {
+            const gridEl = document.getElementById('trendsGrid');
+            gridEl.innerHTML = '';
+
+            trends.forEach(trend => {
+                const trendCard = document.createElement('div');
+                trendCard.className = 'trend-card';
+                
+                const imageHtml = trend.image_url 
+                    ? `<div class="trend-image">
+                         <img src="${trend.thumbnail_url || trend.image_url}" 
+                              alt="${trend.title}" 
+                              loading="lazy"
+                              onerror="this.style.display='none'">
+                       </div>`
+                    : '';
+                
+                const tagsHtml = trend.tags && trend.tags.length > 0
+                    ? `<div class="trend-tags">
+                         ${trend.tags.slice(0, 3).map(tag => `<span class="trend-tag">${tag}</span>`).join('')}
+                       </div>`
+                    : '';
+                
+                const platformHtml = trend.source_platform
+                    ? `<span class="trend-platform">${trend.source_platform}</span>`
+                    : '';
+
+                // Clean description - remove HTML tags and format
+                const cleanDesc = trend.description ? cleanDescription(trend.description) : '';
+                const displayDesc = cleanDesc.length > 150 ? cleanDesc.substring(0, 150) + '...' : cleanDesc;
+                
+                trendCard.innerHTML = `
+                    ${imageHtml}
+                    <div class="trend-content">
+                        <h3 class="trend-title">${escapeHtml(trend.title)}</h3>
+                        ${displayDesc ? `<p class="trend-description">${escapeHtml(displayDesc)}</p>` : ''}
+                        ${tagsHtml}
+                        <div class="trend-footer">
+                            ${platformHtml}
+                            <a href="${trend.source_url}" target="_blank" rel="noopener noreferrer" class="trend-link">
+                                View Source <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                gridEl.appendChild(trendCard);
+            });
+        }
+
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Clean HTML tags and format text
+        function cleanDescription(text) {
+            if (!text) return '';
+            
+            // Remove HTML tags
+            let cleaned = text.replace(/<[^>]*>/g, '');
+            
+            // Replace multiple spaces/newlines with single space
+            cleaned = cleaned.replace(/\s+/g, ' ').trim();
+            
+            // Remove common HTML entities
+            cleaned = cleaned.replace(/&nbsp;/g, ' ');
+            cleaned = cleaned.replace(/&amp;/g, '&');
+            cleaned = cleaned.replace(/&lt;/g, '<');
+            cleaned = cleaned.replace(/&gt;/g, '>');
+            cleaned = cleaned.replace(/&quot;/g, '"');
+            cleaned = cleaned.replace(/&#39;/g, "'");
+            
+            // Clean up multiple spaces again
+            cleaned = cleaned.replace(/\s+/g, ' ').trim();
+            
+            return cleaned;
+        }
+
+        // Setup auto-refresh
+        function setupTrendsAutoRefresh() {
+            // Load immediately
+            loadTrends();
+            
+            // Set up interval refresh
+            trendsRefreshTimer = setInterval(loadTrends, TRENDS_REFRESH_INTERVAL);
+        }
+
+        // Manual refresh button
+        document.addEventListener('DOMContentLoaded', function() {
+            const refreshBtn = document.getElementById('refreshTrendsBtn');
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loadTrends();
+                });
+            }
+            
+            // Initialize trends loading
+            setupTrendsAutoRefresh();
+        });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (trendsRefreshTimer) {
+                clearInterval(trendsRefreshTimer);
+            }
+        });
     </script>
 
     <!-- Case Study Popup -->

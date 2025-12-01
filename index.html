@@ -29,6 +29,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#trends">Trends</a></li>
+                <li><a href="#lessons">Lessons</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -855,52 +856,116 @@
     </section>
 
     <!-- Design Trends Section -->
-    <section class="trends" id="trends">
-        <div class="container">
-            <div class="section-header">
-                <div class="trends-badge">
-                    <span class="badge-icon"><i class="fas fa-chart-line"></i></span>
-                    <span class="badge-text">Latest Trends</span>
-                </div>
-                <h2>Design Trends <span class="highlight-trends">We're Following</span></h2>
-                <p>Stay updated with the latest design trends and insights from the industry. We monitor trends from Behance, Dribbble, and other leading design platforms.</p>
+    <!-- <section class="trends" id="trends"> -->
+        <!-- <div class="container"> -->
+            <!-- <div class="section-header"> -->
+                <!-- <div class="trends-badge"> -->
+                    <!-- <span class="badge-icon"><i class="fas fa-chart-line"></i></span> -->
+                    <!-- <span class="badge-text">Latest Trends</span> -->
+                <!-- </div> -->
+                <!-- <h2>Design Trends <span class="highlight-trends">We're Following</span></h2> -->
+                <!-- <p>Stay updated with the latest design trends and insights from the industry. We monitor trends from Behance, Dribbble, and other leading design platforms. All trends are displayed in English.</p> -->
                 
                 <!-- Auto-refresh indicator -->
-                <div class="trends-refresh-info">
-                    <span class="refresh-icon"><i class="fas fa-sync-alt"></i></span>
-                    <span class="refresh-text">Auto-updates every 30 minutes</span>
-                    <button id="refreshTrendsBtn" class="refresh-btn" title="Refresh trends now">
-                        <i class="fas fa-redo"></i>
-                    </button>
-                </div>
-            </div>
+                <!-- <div class="trends-refresh-info"> -->
+                    <!-- <span class="refresh-icon"><i class="fas fa-sync-alt"></i></span> -->
+                    <!-- <span class="refresh-text">Auto-updates every 30 minutes</span> -->
+                    <!-- <button id="refreshTrendsBtn" class="refresh-btn" title="Refresh trends now"> -->
+                        <!-- <i class="fas fa-redo"></i> -->
+                    <!-- </button> -->
+                <!-- </div> -->
+            <!-- </div> -->
             
             <!-- Loading state -->
-            <div id="trendsLoading" class="trends-loading">
-                <div class="loading-spinner"></div>
-                <p>Loading design trends...</p>
-            </div>
+            <!-- <div id="trendsLoading" class="trends-loading"> -->
+                <!-- <div class="loading-spinner"></div> -->
+                <!-- <p>Loading design trends...</p> -->
+            <!-- </div> -->
             
             <!-- Error state -->
-            <div id="trendsError" class="trends-error" style="display: none;">
-                <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                <h3>Unable to load trends</h3>
-                <p>Please check your connection or try again later.</p>
-                <button onclick="loadTrends()" class="btn btn-secondary">Retry</button>
-            </div>
+            <!-- <div id="trendsError" class="trends-error" style="display: none;"> -->
+                <!-- <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div> -->
+                <!-- <h3>Unable to load trends</h3> -->
+                <!-- <p>Please check your connection or try again later.</p> -->
+                <!-- <button onclick="loadTrends()" class="btn btn-secondary">Retry</button> -->
+            <!-- </div> -->
             
             <!-- Trends grid -->
-            <div id="trendsGrid" class="trends-grid" style="display: none;">
+            <!-- <div id="trendsGrid" class="trends-grid" style="display: none;"> -->
                 <!-- Trends will be inserted here by JavaScript -->
-            </div>
+            <!-- </div> -->
             
             <!-- Empty state -->
-            <div id="trendsEmpty" class="trends-empty" style="display: none;">
-                <div class="empty-icon"><i class="fas fa-inbox"></i></div>
-                <p>No trends available at the moment.</p>
+            <!-- <div id="trendsEmpty" class="trends-empty" style="display: none;"> -->
+                <!-- <div class="empty-icon"><i class="fas fa-inbox"></i></div> -->
+                <!-- <p>No trends available at the moment.</p> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </section> -->
+
+    <!-- Lessons Section -->
+    <!-- <section class="lessons" id="lessons">
+        <div class="container">
+            <div class="section-header">
+                <div class="lessons-badge">
+                    <span class="badge-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <span class="badge-text">Educational Content</span>
+                </div>
+                <h2>Lessons <span class="highlight-lessons">We Offer</span></h2>
+                <p>Learn from our expertise and gain valuable insights into digital transformation.</p>
+            </div>
+            
+            <div class="lessons-grid">
+                <div class="lesson-card" data-lesson="1">
+                    <div class="lesson-image"> -->
+                        <!-- Lesson image will be added here -->
+                    <!-- </div>
+                    <div class="lesson-content">
+                        <h3 class="lesson-title">Lesson Title</h3>
+                        <p class="lesson-description">Lesson description will be added here.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-number">LESSON 1</span>
+                            <a href="#" class="lesson-link" onclick="event.preventDefault(); openLessonPopup(1);">
+                                View Lesson <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- <div class="lesson-card" data-lesson="2">
+                    <div class="lesson-image"> -->
+                        <!-- Lesson image will be added here -->
+                    <!-- </div>
+                    <div class="lesson-content">
+                        <h3 class="lesson-title">Lesson Title</h3>
+                        <p class="lesson-description">Lesson description will be added here.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-number">LESSON 2</span>
+                            <a href="#" class="lesson-link" onclick="event.preventDefault(); openLessonPopup(2);">
+                                View Lesson <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lesson-card" data-lesson="3">
+                    <div class="lesson-image"> -->
+                        <!-- Lesson image will be added here -->
+                    <!-- </div>
+                    <div class="lesson-content">
+                        <h3 class="lesson-title">Lesson Title</h3>
+                        <p class="lesson-description">Lesson description will be added here.</p>
+                        <div class="lesson-footer">
+                            <span class="lesson-number">LESSON 3</span>
+                            <a href="#" class="lesson-link" onclick="event.preventDefault(); openLessonPopup(3);">
+                                View Lesson <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- CTA Section (FBM: Ability + Prompts) -->
     <section class="cta" id="contact">
@@ -1629,7 +1694,10 @@
         }
 
         // Design Trends Integration
-        const TRENDS_API_URL = 'http://localhost:8000/api/trends'; // Change to your API URL
+        // Use production API URL - change this to your actual API endpoint
+        const TRENDS_API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+            ? 'http://localhost:8000/api/trends'
+            : 'https://api.designlytics.ee/api/trends'; // Production API URL
         const TRENDS_REFRESH_INTERVAL = 30 * 60 * 1000; // 30 minutes
         let trendsRefreshTimer = null;
 
@@ -1799,6 +1867,165 @@
                 clearInterval(trendsRefreshTimer);
             }
         });
+
+        // Lesson Popup Data
+        const lessonData = {
+            1: {
+                title: "Digital Transformation Fundamentals",
+                description: "Master the basics of digital transformation and learn how to leverage technology to grow your business.",
+                price: "€297",
+                duration: "2 hours",
+                format: "Video + PDF Materials",
+                whatYouGet: [
+                    "Complete video course (2 hours)",
+                    "Downloadable PDF guide",
+                    "Practical worksheets and templates",
+                    "Access to private community",
+                    "Certificate of completion"
+                ],
+                benefits: [
+                    "Understand digital transformation strategies",
+                    "Learn to identify opportunities in your business",
+                    "Get actionable frameworks you can use immediately",
+                    "Join a community of like-minded entrepreneurs"
+                ],
+                targetAudience: "Business owners, entrepreneurs, and managers looking to modernize their operations"
+            },
+            2: {
+                title: "AI & Automation for Local Business",
+                description: "Discover how AI chatbots and automation can transform your customer service and reduce operational costs.",
+                price: "€397",
+                duration: "3 hours",
+                format: "Video + Live Demo + Templates",
+                whatYouGet: [
+                    "Comprehensive video course (3 hours)",
+                    "Live demonstration of AI chatbot setup",
+                    "Ready-to-use automation templates",
+                    "Step-by-step implementation guide",
+                    "30-day email support",
+                    "Certificate of completion"
+                ],
+                benefits: [
+                    "Learn to implement AI chatbots in 24 hours",
+                    "Reduce customer service costs by 60%",
+                    "Automate repetitive tasks",
+                    "Capture leads 24/7 automatically"
+                ],
+                targetAudience: "Local business owners who want to automate customer service and operations"
+            },
+            3: {
+                title: "Conversion Optimization Mastery",
+                description: "Learn proven techniques to turn more website visitors into customers and increase your revenue.",
+                price: "€497",
+                duration: "4 hours",
+                format: "Video + Case Studies + Tools",
+                whatYouGet: [
+                    "In-depth video course (4 hours)",
+                    "Real case studies from 323+ businesses",
+                    "A/B testing templates and tools",
+                    "UX/UI optimization checklist",
+                    "Conversion rate calculator",
+                    "60-day email support",
+                    "Certificate of completion"
+                ],
+                benefits: [
+                    "Increase conversion rates by 40%+",
+                    "Learn data-driven optimization methods",
+                    "Get proven frameworks from real businesses",
+                    "See results in 7-14 days"
+                ],
+                targetAudience: "Business owners with existing websites who want to improve conversion rates"
+            }
+        };
+
+        // Open lesson popup
+        function openLessonPopup(lessonNumber) {
+            const data = lessonData[lessonNumber];
+            if (!data) return;
+
+            const popup = document.getElementById('lessonPopup');
+            const overlay = document.getElementById('lessonPopupOverlay');
+            
+            // Populate popup content
+            popup.querySelector('.lesson-popup-title').textContent = data.title;
+            popup.querySelector('.lesson-popup-description').textContent = data.description;
+            popup.querySelector('.lesson-popup-price').textContent = data.price;
+            popup.querySelector('.lesson-popup-duration').textContent = data.duration;
+            popup.querySelector('.lesson-popup-format').textContent = data.format;
+            popup.querySelector('.lesson-popup-audience').textContent = data.targetAudience;
+            
+            // Populate "What You Get" list
+            const whatYouGetList = popup.querySelector('.lesson-popup-what-you-get');
+            whatYouGetList.innerHTML = '';
+            data.whatYouGet.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="list-icon">✓</span> ${item}`;
+                whatYouGetList.appendChild(li);
+            });
+            
+            // Populate benefits list
+            const benefitsList = popup.querySelector('.lesson-popup-benefits');
+            benefitsList.innerHTML = '';
+            data.benefits.forEach(benefit => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span class="list-icon">→</span> ${benefit}`;
+                benefitsList.appendChild(li);
+            });
+
+            // Show popup
+            overlay.classList.add('active');
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close lesson popup
+        function closeLessonPopup() {
+            const popup = document.getElementById('lessonPopup');
+            const overlay = document.getElementById('lessonPopupOverlay');
+            
+            overlay.classList.remove('active');
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Setup lesson popup close handlers
+        function setupLessonPopupCloseHandlers() {
+            const overlay = document.getElementById('lessonPopupOverlay');
+            const closeBtn = document.querySelector('.lesson-popup-close');
+            
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeLessonPopup();
+                    }
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeLessonPopup();
+                });
+            }
+        }
+
+        // Close lesson popup on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const popup = document.getElementById('lessonPopup');
+                if (popup && popup.classList.contains('active')) {
+                    closeLessonPopup();
+                }
+            }
+        });
+
+        // Setup close handlers when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupLessonPopupCloseHandlers);
+        } else {
+            setupLessonPopupCloseHandlers();
+        }
     </script>
 
     <!-- Case Study Popup -->
@@ -1859,6 +2086,72 @@
                     <span>Get Your Free Consultation</span>
                 </a>
                 <p class="case-study-footer-text">Ready to achieve similar results? Let's discuss your project.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lesson Popup -->
+    <div id="lessonPopupOverlay" class="popup-overlay"></div>
+    <div id="lessonPopup" class="lesson-popup">
+        <button class="lesson-popup-close" aria-label="Close popup" onclick="closeLessonPopup()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lesson-popup-content">
+            <div class="lesson-popup-header">
+                <div class="lesson-popup-badge">
+                    <span class="badge-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <span class="badge-text">Premium Course</span>
+                </div>
+                <h2 class="lesson-popup-title"></h2>
+                <p class="lesson-popup-description"></p>
+            </div>
+            
+            <div class="lesson-popup-body">
+                <div class="lesson-popup-pricing">
+                    <div class="pricing-info">
+                        <div class="price-item">
+                            <span class="price-label">Price:</span>
+                            <span class="price-value lesson-popup-price"></span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Duration:</span>
+                            <span class="price-value lesson-popup-duration"></span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Format:</span>
+                            <span class="price-value lesson-popup-format"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-popup-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-gift"></i> What You Get
+                    </h3>
+                    <ul class="lesson-popup-what-you-get"></ul>
+                </div>
+
+                <div class="lesson-popup-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-star"></i> Key Benefits
+                    </h3>
+                    <ul class="lesson-popup-benefits"></ul>
+                </div>
+
+                <div class="lesson-popup-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-users"></i> Who Is This For?
+                    </h3>
+                    <p class="lesson-popup-audience"></p>
+                </div>
+            </div>
+
+            <div class="lesson-popup-footer">
+                <a href="#contact" class="btn btn-primary lesson-popup-cta" onclick="closeLessonPopup()">
+                    <span class="btn-icon"><i class="fas fa-shopping-cart"></i></span>
+                    <span>Enroll Now</span>
+                </a>
+                <p class="lesson-popup-footer-text">Start learning today and transform your business!</p>
             </div>
         </div>
     </div>

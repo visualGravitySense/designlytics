@@ -1302,6 +1302,7 @@
                     if (formSuccess) {
                         formSuccess.style.display = 'block';
                         const successH3 = formSuccess.querySelector('h3');
+                        window.location.href = '/thank-you.html';
                         if (successH3 && name) {
                             successH3.textContent = `Thank you, ${name}!`;
                         }

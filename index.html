@@ -32,8 +32,10 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="img/logo-1.svg" alt="Designlytics Logo" class="logo-img">
-                Designlytics
+                <a href="index.html">
+                    <img src="img/logo-1.svg" alt="Designlytics Logo" class="logo-img">
+                    <div class="logo">Designlytics</div>
+                </a>
             </div>
             <ul>
                 <li><a href="#services" data-i18n="nav_services">Services</a></li>
@@ -353,7 +355,7 @@
                     
                     <!-- FBM: PROMPTS - Clear CTA -->
                     <div class="solution-action">
-                        <a href="#contact" class="solution-cta">
+                        <a href="case-iot.html" class="solution-cta">
                             <span data-i18n="solution_cta_view">View the case</span>
                             <span class="cta-arrow">→</span>
                         </a>
@@ -384,7 +386,7 @@
                     
                     <!-- FBM: PROMPTS - Clear CTA -->
                     <div class="solution-action">
-                        <a href="#contact" class="solution-cta">
+                        <a href="case-chatbots.html" class="solution-cta">
                             <span data-i18n="solution_cta_view">View the case</span>
                             <span class="cta-arrow">→</span>
                         </a>
@@ -415,7 +417,7 @@
                     
                     <!-- FBM: PROMPTS - Clear CTA -->
                     <div class="solution-action">
-                        <a href="#contact" class="solution-cta">
+                        <a href="case-conversion.html" class="solution-cta">
                             <span>View the case</span>
                             <span class="cta-arrow">→</span>
                         </a>
@@ -446,7 +448,7 @@
                     
                     <!-- FBM: PROMPTS - Clear CTA -->
                     <div class="solution-action">
-                        <a href="#contact" class="solution-cta">
+                        <a href="case-automation.html" class="solution-cta">
                             <span data-i18n="solution_cta_view">View the case</span>
                             <span class="cta-arrow">→</span>
                         </a>
@@ -611,9 +613,9 @@
                     <li data-i18n="offer_f6">Ongoing support and measurable results tracking</li>
                 </ul>
                 <div class="urgency">
-                    <i class="fas fa-bullseye"></i> <span data-i18n="offer_urgent1">Limited to top 20 priority clients</span><br>
+                    <!-- <i class="fas fa-bullseye"></i> <span data-i18n="offer_urgent1">Limited to top 20 priority clients</span><br>
                     <i class="fas fa-chart-bar"></i> <span data-i18n="offer_urgent2">For businesses scoring 85+ in our analysis</span><br>
-                    <i class="fas fa-lightbulb"></i> <span data-i18n="offer_urgent3">Personalized solutions tailored to your needs</span>
+                    <i class="fas fa-lightbulb"></i> <span data-i18n="offer_urgent3">Personalized solutions tailored to your needs</span> -->
                     <div>
                         <a href="#contact" class="btn btn-primary" data-i18n="offer_btn">Join the Pilot Program</a>
                     </div>
@@ -1111,7 +1113,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p data-i18n="footer_copyright">&copy; 2025 Digital Transformation Solutions. All rights reserved.</p>
+            <p data-i18n="footer_copyright">&copy; 2026 Digital Transformation Solutions. All rights reserved.</p>
             <p style="margin-top: 1rem;" data-i18n="footer_tagline">Helping local businesses embrace digital transformation with personalized, ROI-driven solutions.</p>
             
             <!-- Business Information -->
@@ -1660,15 +1662,7 @@
             document.body.style.overflow = '';
         }
 
-        // Add event listeners to solution CTA buttons
-        document.querySelectorAll('.solution-cta').forEach(cta => {
-            cta.addEventListener('click', function(e) {
-                e.preventDefault();
-                const solutionCard = this.closest('.solution-card');
-                const solutionType = solutionCard.getAttribute('data-solution');
-                openCaseStudy(solutionType);
-            });
-        });
+        // Solution CTA links now navigate to separate case pages (case-iot.html, case-chatbots.html, etc.)
 
         // Close popup on overlay click
         function setupPopupCloseHandlers() {

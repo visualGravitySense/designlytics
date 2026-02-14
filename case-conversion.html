@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autokool - Konversiooni optimeerimine | Designlytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/i18n.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="case-conversion-page">
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-1.svg" alt="Designlytics Logo" class="logo-img">
+                    <div class="logo">Designlytics</div>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="index.html#process" data-i18n="nav_process">Process</a></li>
+                <li><a href="index.html#trends" data-i18n="nav_trends">Trends</a></li>
+                <li><a href="index.html#lessons" data-i18n="nav_lessons">Lessons</a></li>
+                <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+                <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><div class="lang-switcher" aria-label="Language">
+                    <button type="button" data-lang="et" class="active" aria-pressed="true">Eesti</button>
+                    <button type="button" data-lang="en" aria-pressed="false">English</button>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="case-page case-page--conversion">
+        <!-- Hero with Before/After -->
+        <section class="case-conv-hero">
+            <div class="container case-conv-hero__inner">
+                <a href="index.html#services" class="case-back" data-i18n="case_back">← Tagasi teenuste juurde</a>
+                <!-- <nav class="case-conv-breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html#services" data-i18n="case_conv_breadcrumb">Teenused</a>
+                    <span class="case-conv-breadcrumb__sep">/</span>
+                    <span data-i18n="case_conv_breadcrumb_current">Autokool</span>
+                </nav> -->
+                <div class="case-conv-hero__grid">
+                    <div class="case-conv-hero__content">
+                        <div class="case-conv-hero__badges">
+                            <span class="case-conv-hero__badge case-conv-hero__badge--old"><i class="fas fa-times-circle"></i> <span data-i18n="case_conv_hero_old">Vananenud WP</span></span>
+                            <span class="case-conv-hero__arrow">↓</span>
+                            <span class="case-conv-hero__badge case-conv-hero__badge--new"><i class="fas fa-check-circle"></i> <span data-i18n="case_conv_hero_new">Kaasaegne konversioon</span></span>
+                        </div>
+                        <h1 class="case-conv-hero__title" data-i18n="case_conv_title">Autokool – veebilehe transformatsioon ja konversiooni optimeerimine</h1>
+                        <p class="case-conv-hero__lead" data-i18n="case_conv_lead">Täielik digitaalne transformatsioon: kaasaegne disain, AI vestlusrobot, online broneerimine ja maksesüsteem.</p>
+                        <div class="case-conv-hero-metrics">
+                            <div class="case-conv-hero-metric">
+                                <i class="fas fa-chart-line"></i>
+                                <span class="case-conv-hero-metric__value" data-i18n="case_conv_hero_m1">+40%</span>
+                                <span class="case-conv-hero-metric__label" data-i18n="case_conv_hero_m1_label">konversioon</span>
+                            </div>
+                            <div class="case-conv-hero-metric">
+                                <i class="fas fa-bolt"></i>
+                                <span class="case-conv-hero-metric__value" data-i18n="case_conv_hero_m2">7</span>
+                                <span class="case-conv-hero-metric__label" data-i18n="case_conv_hero_m2_label">päevaga tulemused</span>
+                            </div>
+                            <div class="case-conv-hero-metric">
+                                <i class="fas fa-calendar-check"></i>
+                                <span class="case-conv-hero-metric__value" data-i18n="case_conv_hero_m3">24/7</span>
+                                <span class="case-conv-hero-metric__label" data-i18n="case_conv_hero_m3_label">broneeringud</span>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="btn btn-primary case-conv-hero__cta" data-i18n="case_conv_view_live">Vaata tasuta auditi</a>
+                    </div>
+                    <div class="case-conv-before-after">
+                        <div class="case-conv-ba-wrapper">
+                            <div class="case-conv-ba-card case-conv-ba-card--before">
+                                <span class="case-conv-ba-label" data-i18n="case_conv_before">Enne</span>
+                                <div class="case-conv-ba-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <span data-i18n="case_conv_old_site">Vananenud veebileht</span>
+                                </div>
+                            </div>
+                            <div class="case-conv-ba-card case-conv-ba-card--after">
+                                <span class="case-conv-ba-label" data-i18n="case_conv_after">Pärast</span>
+                                <div class="case-conv-ba-placeholder">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-i18n="case_conv_new_site">Kaasaegne konversioon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container case-conv-content">
+            <!-- Challenge: Problems of old site -->
+            <section class="case-section case-conv-challenge">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_challenge">Kliendi väljakutse</h2>
+                <p class="case-conv-section__intro" data-i18n="case_conv_challenge_p">Autokool kasutas vananenud WordPressi veebilehte, mis kahjustas nende äri:</p>
+                <div class="case-conv-problems-grid">
+                    <div class="case-conv-problem-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4 data-i18n="case_conv_prob1">Madal konversioon</h4>
+                        <p data-i18n="case_conv_prob1_desc">Külastajad lahkusid midagi tegemata</p>
+                    </div>
+                    <div class="case-conv-problem-card">
+                        <i class="fas fa-euro-sign"></i>
+                        <h4 data-i18n="case_conv_prob2">Kaotatud liidid öösiti</h4>
+                        <p data-i18n="case_conv_prob2_desc">Võimatu koguda päringuid väljaspool tööaega</p>
+                    </div>
+                    <div class="case-conv-problem-card">
+                        <i class="fas fa-user-times"></i>
+                        <h4 data-i18n="case_conv_prob3">Kliendid lahkuvad</h4>
+                        <p data-i18n="case_conv_prob3_desc">Segane navigatsioon, halb mobiili kogemus</p>
+                    </div>
+                </div>
+                <div class="case-conv-before-after-cards">
+                    <div class="case-conv-ba-card-full case-conv-ba-card-full--before">
+                        <div class="case-conv-ba-card-full__icon"><i class="fas fa-times-circle"></i></div>
+                        <h3 data-i18n="case_conv_before">Enne</h3>
+                        <ul>
+                            <li data-i18n="case_conv_before_1">Vananenud disain, ei äratanud usaldust</li>
+                            <li data-i18n="case_conv_before_2">Puudus online broneerimine</li>
+                            <li data-i18n="case_conv_before_3">Kaotatud liidid ööpäevaringselt</li>
+                            <li data-i18n="case_conv_before_4">Käsitsi maksete töötlemine</li>
+                            <li data-i18n="case_conv_before_5">Halb mobiilne kogemus</li>
+                        </ul>
+                    </div>
+                    <div class="case-conv-ba-card-full case-conv-ba-card-full--after">
+                        <div class="case-conv-ba-card-full__icon"><i class="fas fa-check-circle"></i></div>
+                        <h3 data-i18n="case_conv_after">Pärast</h3>
+                        <ul>
+                            <li data-i18n="case_conv_after_1">Usaldust äratav kaasaegne disain</li>
+                            <li data-i18n="case_conv_after_2">Online broneerimine 24/7</li>
+                            <li data-i18n="case_conv_after_3">AI bot kogub juhte ööpäevaringselt</li>
+                            <li data-i18n="case_conv_after_4">Automaatne maksete töötlemine</li>
+                            <li data-i18n="case_conv_after_5">Mobile-first, kiire laadimine</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution: Feature cards -->
+            <section class="case-section">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_solution">Meie lahendus</h2>
+                <p data-i18n="case_conv_solution_p">Viisime läbi <strong>täieliku digitaalse transformatsiooni</strong>:</p>
+                <ul class="case-conv-features">
+                    <li data-i18n="case_conv_f1"><i class="fas fa-paint-brush"></i> <strong>UX/UI Redesign</strong> – trust-inspiring disain, mobile-first, selged CTA-d</li>
+                    <li data-i18n="case_conv_f2"><i class="fas fa-robot"></i> <strong>24/7 AI Chatbot</strong> – vastab küsimustele, kogub juhte, soovitab kursuseid</li>
+                    <li data-i18n="case_conv_f3"><i class="fas fa-credit-card"></i> <strong>Online maksesüsteem</strong> – turvaline makselüüs, automaatne arveldamine</li>
+                    <li data-i18n="case_conv_f4"><i class="fas fa-calendar-alt"></i> <strong>Broneerimissüsteem</strong> – reaalajas kalender, online registreerimine</li>
+                    <li data-i18n="case_conv_f5"><i class="fas fa-vial"></i> <strong>A/B testimine</strong> – pidev optimeerimine andmete põhjal</li>
+                </ul>
+            </section>
+
+            <!-- Transformation Journey: Timeline -->
+            <section class="case-section case-conv-timeline">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_timeline_title">Projekti ajakava</h2>
+                <div class="case-conv-timeline__visual">
+                    <div class="case-conv-timeline__phase">
+                        <span class="case-conv-timeline__week">1–2 näd</span>
+                        <div class="case-conv-timeline__icon"><i class="fas fa-search"></i></div>
+                        <h4 data-i18n="case_conv_t1_title">Discovery & Strategy</h4>
+                        <p data-i18n="case_conv_t1_desc">Audit, konkurendianalüüs, strateegia</p>
+                    </div>
+                    <div class="case-conv-timeline__line"></div>
+                    <div class="case-conv-timeline__phase">
+                        <span class="case-conv-timeline__week">3–4 näd</span>
+                        <div class="case-conv-timeline__icon"><i class="fas fa-pencil-ruler"></i></div>
+                        <h4 data-i18n="case_conv_t2_title">Design & Wireframes</h4>
+                        <p data-i18n="case_conv_t2_desc">Prototüüp, kasutajatestimine</p>
+                    </div>
+                    <div class="case-conv-timeline__line"></div>
+                    <div class="case-conv-timeline__phase">
+                        <span class="case-conv-timeline__week">5–6 näd</span>
+                        <div class="case-conv-timeline__icon"><i class="fas fa-rocket"></i></div>
+                        <h4 data-i18n="case_conv_t3_title">Development & Launch</h4>
+                        <p data-i18n="case_conv_t3_desc">Arendus, testimine, käivitamine</p>
+                    </div>
+                </div>
+                <p class="case-conv-timeline__total" data-i18n="case_conv_timeline_total">⏱ Kokku: 6 nädalat</p>
+            </section>
+
+            <!-- Results: Big metrics -->
+            <section class="case-section case-conv-results">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_results">Mõõdetavad tulemused</h2>
+                <div class="case-conv-results-hero">
+                    <span class="case-conv-results-hero__value">+40%</span>
+                    <h3 data-i18n="case_conv_results_main">KONVERSIOON</h3>
+                    <div class="case-conv-results-bar">
+                        <div class="case-conv-results-bar__row">
+                            <span data-i18n="case_conv_before">Enne</span>
+                            <span>2.5%</span>
+                            <div class="case-conv-results-bar__fill case-conv-results-bar__fill--before" style="width: 35%;"></div>
+                        </div>
+                        <div class="case-conv-results-bar__row">
+                            <span data-i18n="case_conv_after">Pärast</span>
+                            <span>3.5%</span>
+                            <div class="case-conv-results-bar__fill case-conv-results-bar__fill--after" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-conv-results-grid">
+                    <div class="case-conv-result-card">
+                        <i class="fas fa-bolt"></i>
+                        <span class="case-conv-result-card__value">7</span>
+                        <h4 data-i18n="case_conv_r2">päevaga tulemused</h4>
+                        <p data-i18n="case_conv_r2a">Kohene mõju liidide genereerimisele</p>
+                    </div>
+                    <div class="case-conv-result-card">
+                        <i class="fas fa-euro-sign"></i>
+                        <span class="case-conv-result-card__value">50%</span>
+                        <h4 data-i18n="case_conv_r3">rohkem broneeringuid</h4>
+                        <p data-i18n="case_conv_m2">30% kasv väljaspool tööaega registreerimistes</p>
+                    </div>
+                    <div class="case-conv-result-card">
+                        <i class="fas fa-star"></i>
+                        <span class="case-conv-result-card__value">4.8/5</span>
+                        <h4 data-i18n="case_conv_r4">rating</h4>
+                        <p data-i18n="case_conv_m4">keskmine kliendirahulolu hinnang</p>
+                    </div>
+                </div>
+                <div class="case-conv-testimonial">
+                    <blockquote>
+                        <p data-i18n="case_conv_testimonial">"Uus veebileht ületas kõik ootused. Esimese nädala jooksul kasvas online-registreerimiste arv 50%. Chatbot töötab 24/7 ja vastab enamikule küsimustele. ROI saavutasime kahe kuuga."</p>
+                        <cite data-i18n="case_conv_testimonial_author">— Viktor Nagorski, Omanik @ Viktorija Autokool Nõmme</cite>
+                    </blockquote>
+                    <div class="case-conv-testimonial__stars">★★★★★</div>
+                </div>
+            </section>
+
+            <!-- Key Features Showcase -->
+            <section class="case-section case-conv-showcase">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_showcase_title">Mis muutus konkreetselt?</h2>
+                <div class="case-conv-showcase-grid">
+                    <div class="case-conv-showcase-card">
+                        <div class="case-conv-showcase-card__num">1</div>
+                        <h4 data-i18n="case_conv_showcase_1">Online Broneerimissüsteem</h4>
+                        <ul>
+                            <li data-i18n="case_conv_showcase_1a">Reaalajas saadavus</li>
+                            <li data-i18n="case_conv_showcase_1b">Kohene kinnitus</li>
+                            <li data-i18n="case_conv_showcase_1c">Kalendri integratsioon</li>
+                        </ul>
+                        <p class="case-conv-showcase-card__result" data-i18n="case_conv_showcase_1_result">Tulemus: 60% broneeringuid toimub online</p>
+                    </div>
+                    <div class="case-conv-showcase-card">
+                        <div class="case-conv-showcase-card__num">2</div>
+                        <h4 data-i18n="case_conv_showcase_2">24/7 AI Chatbot</h4>
+                        <ul>
+                            <li data-i18n="case_conv_showcase_2a">Kohested vastused hindadele</li>
+                            <li data-i18n="case_conv_showcase_2b">Kursuste soovitused</li>
+                            <li data-i18n="case_conv_showcase_2c">Broneerimise ettepanekud</li>
+                        </ul>
+                        <p class="case-conv-showcase-card__result" data-i18n="case_conv_showcase_2_result">Tulemus: 80% küsimustest vastatud</p>
+                    </div>
+                    <div class="case-conv-showcase-card">
+                        <div class="case-conv-showcase-card__num">3</div>
+                        <h4 data-i18n="case_conv_showcase_3">Turvaline Online Maksmine</h4>
+                        <ul>
+                            <li data-i18n="case_conv_showcase_3a">Mitmed makseviisid</li>
+                            <li data-i18n="case_conv_showcase_3b">Järelmaksu valikud</li>
+                            <li data-i18n="case_conv_showcase_3c">Automaatne arveldamine</li>
+                        </ul>
+                        <p class="case-conv-showcase-card__result" data-i18n="case_conv_showcase_3_result">Tulemus: 40% kiirem maksete töötlemine</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="case-section case-conv-tech">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_tech">Tehnoloogiad</h2>
+                <div class="case-conv-tech-grid">
+                    <div class="case-conv-tech-item"><i class="fas fa-desktop"></i> <span data-i18n="case_conv_tech_1">Responsive veebidisain</span></div>
+                    <div class="case-conv-tech-item"><i class="fas fa-robot"></i> <span data-i18n="case_conv_tech_2">AI vestlusrobot NLP-ga</span></div>
+                    <div class="case-conv-tech-item"><i class="fas fa-lock"></i> <span data-i18n="case_conv_tech_3">Turvaline makselüüs</span></div>
+                    <div class="case-conv-tech-item"><i class="fas fa-calendar-alt"></i> <span data-i18n="case_conv_tech_4">Broneerimise süsteem</span></div>
+                    <div class="case-conv-tech-item"><i class="fas fa-chart-bar"></i> <span data-i18n="case_conv_tech_5">Analüütika ja jälgimine</span></div>
+                    <div class="case-conv-tech-item"><i class="fas fa-envelope"></i> <span data-i18n="case_conv_tech_6">E-posti automatiseerimine</span></div>
+                </div>
+            </section>
+
+            <!-- Investment & ROI -->
+            <section class="case-section case-conv-invest">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_invest">Investeering ja tagasitulek</h2>
+                <div class="case-conv-invest-grid">
+                    <div class="case-conv-invest-card">
+                        <h4 data-i18n="case_conv_invest_title">Projekti investeering</h4>
+                        <p class="case-conv-invest-sum" data-i18n="case_conv_invest_sum">€8,000 – €12,000</p>
+                        <ul>
+                            <li data-i18n="case_conv_invest_1">Veebilehe redesign ja arendus</li>
+                            <li data-i18n="case_conv_invest_2">AI vestlusroboti seadistamine</li>
+                            <li data-i18n="case_conv_invest_3">Maksesüsteemi integreerimine</li>
+                            <li data-i18n="case_conv_invest_4">Koolitus ja dokumentatsioon</li>
+                        </ul>
+                        <p class="case-conv-invest-monthly" data-i18n="case_conv_monthly">+ Kuukulud: €100–200</p>
+                    </div>
+                    <div class="case-conv-invest-card case-conv-invest-card--roi">
+                        <h4 data-i18n="case_conv_roi_title">ROI Timeline</h4>
+                        <div class="case-conv-roi-timeline">
+                            <div class="case-conv-roi-phase">
+                                <span>Ku 1</span>
+                                <span data-i18n="case_conv_roi_1">Break-even</span>
+                            </div>
+                            <div class="case-conv-roi-phase">
+                                <span>Ku 2</span>
+                                <span data-i18n="case_conv_roi_2">Full ROI</span>
+                            </div>
+                            <div class="case-conv-roi-phase">
+                                <span>Ku 3+</span>
+                                <span data-i18n="case_conv_roi_3">Kasum</span>
+                            </div>
+                        </div>
+                        <p class="case-conv-invest-gain" data-i18n="case_conv_roi_gain">💰 Hinnanguline aastane kasum: €48,000+</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mobile Experience -->
+            <section class="case-section case-conv-mobile">
+                <h2 class="case-conv-section__title" data-i18n="case_conv_mobile_title">Mobile-First lähenemisviis</h2>
+                <div class="case-conv-mobile-compare">
+                    <div class="case-conv-mobile-side case-conv-mobile-side--before">
+                        <h4 data-i18n="case_conv_before">Enne</h4>
+                        <div class="case-conv-mobile-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>❌ 45% bounce</span>
+                            <span>❌ Aeglane laadimine</span>
+                        </div>
+                    </div>
+                    <div class="case-conv-mobile-side case-conv-mobile-side--after">
+                        <h4 data-i18n="case_conv_after">Pärast</h4>
+                        <div class="case-conv-mobile-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>✅ 15% bounce</span>
+                            <span>✅ Kiire laadimine</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-conv-mobile-metrics">
+                    <span><i class="fas fa-mobile-alt"></i> 60% kasutajatest on mobiilis</span>
+                    <span><i class="fas fa-bolt"></i> 85% kiirem laadimine</span>
+                    <span><i class="fas fa-thumbs-up"></i> 95% parem UX-skoor</span>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="case-conv-cta">
+                <h2 class="case-conv-cta__title" data-i18n="case_conv_cta_title">Valmis sarnaseid tulemusi saavutama?</h2>
+                <p class="case-conv-cta__sub" data-i18n="case_conv_cta_sub">Saate tasuta analüüsi oma veebilehe kohta ja personaalse konversiooni strateegia</p>
+                <div class="case-conv-cta__benefits">
+                    <p data-i18n="case_conv_cta_b1">✓ Täielik veebilehe audit (väärtus €500)</p>
+                    <p data-i18n="case_conv_cta_b2">✓ Konkurentide analüüs</p>
+                    <p data-i18n="case_conv_cta_b3">✓ Personaliseeritud tegevuskava</p>
+                    <p data-i18n="case_conv_cta_b4">✓ ROI prognoos</p>
+                </div>
+                <p class="case-conv-cta__trust" data-i18n="case_conv_cta_trust">🕐 Vastame 24 tunni jooksul · 🔒 Kohustuseta</p>
+                <a href="index.html#contact" class="btn btn-primary case-conv-cta__btn" data-i18n="case_conv_cta_btn">Tahan tasuta auditi</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_copyright">&copy; 2026 Digital Transformation Solutions.</p>
+            <div class="footer-business-info">
+                <div class="business-info-item company-name"><span class="info-value">DESIGNLYTICS OÜ</span></div>
+                <div class="business-info-item"><span class="info-label" data-i18n="footer_reg">Reg. num:</span> <span class="info-value">17218418</span></div>
+                <div class="business-info-item"><span class="info-label">Email:</span> <a href="mailto:dmitri.gornakov@gmail.com" class="info-value">dmitri.gornakov@gmail.com</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

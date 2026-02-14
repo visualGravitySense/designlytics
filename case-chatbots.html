@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vestlusrobot - 24/7 klienditoe automatiseerimine | Designlytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/i18n.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="case-chatbots-page">
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-1.svg" alt="Designlytics Logo" class="logo-img">
+                    <div class="logo">Designlytics</div>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="index.html#process" data-i18n="nav_process">Process</a></li>
+                <li><a href="index.html#trends" data-i18n="nav_trends">Trends</a></li>
+                <li><a href="index.html#lessons" data-i18n="nav_lessons">Lessons</a></li>
+                <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+                <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><div class="lang-switcher" aria-label="Language">
+                    <button type="button" data-lang="et" class="active" aria-pressed="true">Eesti</button>
+                    <button type="button" data-lang="en" aria-pressed="false">English</button>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="case-page case-page--chatbots">
+        <!-- Hero with Chatbot Demo -->
+        <section class="case-chat-hero">
+            <div class="container case-chat-hero__inner">
+                <a href="index.html#services" class="case-back" data-i18n="case_back">← Tagasi teenuste juurde</a>
+                <!-- <nav class="case-chat-breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html#services" data-i18n="case_chat_breadcrumb">Teenused</a>
+                    <span class="case-chat-breadcrumb__sep">/</span>
+                    <span>AI vestlusrobot</span>
+                </nav> -->
+                <div class="case-chat-hero__grid">
+                    <div class="case-chat-hero__content">
+                        <div class="case-badge" data-i18n="case_chat_badge">AI vestlusrobot</div>
+                        <h1 class="case-chat-hero__title" data-i18n="case_chat_title">AI vestlusrobot – 24/7 klienditoe automatiseerimine</h1>
+                        <p class="case-chat-hero__lead" data-i18n="case_chat_lead">Intelligentne virtuaalne assistent, kes töötab ööpäevaringselt ja õpib pidevalt.</p>
+                        <div class="case-chat-hero-metrics">
+                            <div class="case-chat-hero-metric">
+                                <span class="case-chat-hero-metric__icon"><i class="fas fa-clock"></i></span>
+                                <div>
+                                    <span class="case-chat-hero-metric__value" data-i18n="case_chat_hero_m1">24/7</span>
+                                    <span class="case-chat-hero-metric__label" data-i18n="case_chat_hero_m1_label">töötab ööpäevaringselt</span>
+                                </div>
+                            </div>
+                            <div class="case-chat-hero-metric">
+                                <span class="case-chat-hero-metric__icon"><i class="fas fa-comments"></i></span>
+                                <div>
+                                    <span class="case-chat-hero-metric__value" data-i18n="case_chat_hero_m2">80%</span>
+                                    <span class="case-chat-hero-metric__label" data-i18n="case_chat_hero_m2_label">küsimustele vastatud kohe</span>
+                                </div>
+                            </div>
+                            <div class="case-chat-hero-metric">
+                                <span class="case-chat-hero-metric__icon"><i class="fas fa-bolt"></i></span>
+                                <div>
+                                    <span class="case-chat-hero-metric__value" data-i18n="case_chat_hero_m3"><1s</span>
+                                    <span class="case-chat-hero-metric__label" data-i18n="case_chat_hero_m3_label">keskmine vastuse aeg</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="btn btn-primary case-chat-hero__cta" data-i18n="about_cta_touch">Võta ühendust</a>
+                    </div>
+                    <div class="case-chat-demo">
+                        <div class="case-chat-demo__window">
+                            <div class="case-chat-demo__header">
+                                <i class="fas fa-robot"></i>
+                                <span data-i18n="case_chat_badge">AI vestlusrobot</span>
+                            </div>
+                            <div class="case-chat-demo__messages">
+                                <div class="case-chat-demo__msg case-chat-demo__msg--bot" data-i18n="case_chat_demo_bot">Tere! Kuidas saan aidata?</div>
+                                <div class="case-chat-demo__msg case-chat-demo__msg--user" data-i18n="case_chat_demo_user">Mis on teie hind?</div>
+                                <div class="case-chat-demo__msg case-chat-demo__msg--bot" data-i18n="case_chat_demo_bot2">Baaslahendus alates €3000. Soovitate tasuta analüüsi?</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container case-chat-content">
+            <!-- Challenge: Before/After -->
+            <section class="case-section case-chat-challenge">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_challenge">Kliendi väljakutse</h2>
+                <p class="case-chat-section__intro" data-i18n="case_chat_challenge_p">Ettevõtted seisavad silmitsi pidevalt kasvava kliendipäringute hulgaga. Klienditeenindusmeeskonnad kulutavad kuni 80% ajast korduvate küsimuste vastamisele. Öised päringud jäävad vastuseta.</p>
+                <div class="case-chat-before-after">
+                    <div class="case-chat-ba-card case-chat-ba-card--before">
+                        <div class="case-chat-ba-card__icon"><i class="fas fa-times-circle"></i></div>
+                        <h3 data-i18n="case_chat_before">Ilma botita</h3>
+                        <ul>
+                            <li data-i18n="case_chat_before_1">Tööaeg 9–18</li>
+                            <li data-i18n="case_chat_before_2">80% ajast korduvatele küsimustele</li>
+                            <li data-i18n="case_chat_before_3">Kõrged kulud personalile</li>
+                            <li data-i18n="case_chat_before_4">Klient ootab järgmise päevani</li>
+                        </ul>
+                    </div>
+                    <div class="case-chat-ba-card case-chat-ba-card--after">
+                        <div class="case-chat-ba-card__icon"><i class="fas fa-check-circle"></i></div>
+                        <h3 data-i18n="case_chat_after">AI botiga</h3>
+                        <ul>
+                            <li data-i18n="case_chat_after_1">Töötab 24/7</li>
+                            <li data-i18n="case_chat_after_2">Ainult keerukad küsimused inimestele</li>
+                            <li data-i18n="case_chat_after_3">Kokkuhoid 70%</li>
+                            <li data-i18n="case_chat_after_4">Kohesed vastused</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution -->
+            <section class="case-section">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_solution">Meie lahendus</h2>
+                <p data-i18n="case_chat_solution_p">Arendasime välja <strong>intelligentse AI vestlusroboti</strong>, mis:</p>
+                <ul class="case-features case-chat-features">
+                    <li data-i18n="case_chat_f1"><i class="fas fa-brain"></i> <strong>Õpib automaatselt</strong> – kogub ja analüüsib kogu teabe ettevõtte veebisaidilt</li>
+                    <li data-i18n="case_chat_f2"><i class="fas fa-language"></i> <strong>Mõistab konteksti</strong> – suudab vastata keerukatele küsimustele</li>
+                    <li data-i18n="case_chat_f3"><i class="fas fa-comment-dots"></i> <strong>Räägib inimlikult</strong> – loomulik vestlus kliendi keeles</li>
+                    <li data-i18n="case_chat_f4"><i class="fas fa-sync"></i> <strong>Pidev uuendamine</strong> – jälgib veebilehe muudatusi automaatselt</li>
+                    <li data-i18n="case_chat_f5"><i class="fas fa-globe"></i> <strong>Mitmekeelne tugi</strong> – suhtleb klientidega nende keeles</li>
+                </ul>
+            </section>
+
+            <!-- Process: Visual flow -->
+            <section class="case-section case-chat-process">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_process">Kuidas see töötab</h2>
+                <div class="case-chat-flow">
+                    <div class="case-chat-flow__item">
+                        <div class="case-chat-flow__icon"><i class="fas fa-globe"></i></div>
+                        <span class="case-chat-flow__num">1</span>
+                        <h4 data-i18n="case_chat_p1">Teabe kogumine – Robot skaneerib veebisaidilt</h4>
+                    </div>
+                    <div class="case-chat-flow__arrow">→</div>
+                    <div class="case-chat-flow__item">
+                        <div class="case-chat-flow__icon"><i class="fas fa-brain"></i></div>
+                        <span class="case-chat-flow__num">2</span>
+                        <h4 data-i18n="case_chat_p2">Masinõpe – Analüüsib ja mõistab konteksti</h4>
+                    </div>
+                    <div class="case-chat-flow__arrow">→</div>
+                    <div class="case-chat-flow__item">
+                        <div class="case-chat-flow__icon"><i class="fas fa-comments"></i></div>
+                        <span class="case-chat-flow__num">3</span>
+                        <h4 data-i18n="case_chat_p3">Integreerimine – Paigaldamine veebilehele</h4>
+                    </div>
+                    <div class="case-chat-flow__arrow">→</div>
+                    <div class="case-chat-flow__item">
+                        <div class="case-chat-flow__icon"><i class="fas fa-chart-line"></i></div>
+                        <span class="case-chat-flow__num">4</span>
+                        <h4 data-i18n="case_chat_p4">Pidev õppimine – Muutub targemaks ajaga</h4>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results: Big metrics -->
+            <section class="case-section case-chat-results">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_results">Tulemused</h2>
+                <div class="case-chat-results-grid">
+                    <div class="case-chat-result-card">
+                        <span class="case-chat-result-card__value">24/7</span>
+                        <h3 data-i18n="case_chat_r1">Kapteerige juhte 24/7</h3>
+                        <ul>
+                            <li data-i18n="case_chat_r1a">Kliendid saavad vastuseid igal ajal</li>
+                            <li data-i18n="case_chat_r1b">Ei kao ühtegi müügivõimalust</li>
+                        </ul>
+                    </div>
+                    <div class="case-chat-result-card">
+                        <span class="case-chat-result-card__value">80%</span>
+                        <h3 data-i18n="case_chat_r2">Vastake 80% küsimustele kohe</h3>
+                        <ul>
+                            <li data-i18n="case_chat_r2a">Kohesed vastused sagedastele päringutele</li>
+                            <li data-i18n="case_chat_r2b">Inimesed keskenduvad keerukatele juhtumitele</li>
+                        </ul>
+                    </div>
+                    <div class="case-chat-result-card">
+                        <span class="case-chat-result-card__value">-70%</span>
+                        <h3 data-i18n="case_chat_r3">Kulud alla 70%</h3>
+                        <ul>
+                            <li data-i18n="case_chat_r3a">Vähem personali vaja</li>
+                            <li data-i18n="case_chat_r3b">ROI 3–6 kuuga</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="case-chat-testimonial">
+                    <blockquote>
+                        <p data-i18n="case_chat_testimonial">"Klienditugi vähenes 70% koormust ja kliendirahulolu kasvas 40%. ROI saavutati kahe kuuga."</p>
+                        <cite data-i18n="case_chat_testimonial_author">— Kliendijuht, TechStart</cite>
+                    </blockquote>
+                    <div class="case-chat-testimonial__stars">★★★★★</div>
+                </div>
+            </section>
+
+            <!-- Extra features: Cards -->
+            <section class="case-section">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_extra">Lisafunktsionaalsus</h2>
+                <div class="case-chat-extra-grid">
+                    <div class="case-chat-extra-card">
+                        <i class="fas fa-user-plus"></i>
+                        <h4>Liidide kogumine</h4>
+                        <p data-i18n="case_chat_extra_f1">Kontaktandmete kogumine ja kvalifitseerimine</p>
+                    </div>
+                    <div class="case-chat-extra-card">
+                        <i class="fas fa-link"></i>
+                        <h4>CRM integratsioon</h4>
+                        <p data-i18n="case_chat_extra_f2">Andmete sünkroniseerimine teie süsteemidega</p>
+                    </div>
+                    <div class="case-chat-extra-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Analüütika</h4>
+                        <p data-i18n="case_chat_extra_f3">Ülevaade küsimustest ja käitumisest</p>
+                    </div>
+                    <div class="case-chat-extra-card">
+                        <i class="fas fa-level-up-alt"></i>
+                        <h4>Eskaleerimine</h4>
+                        <p data-i18n="case_chat_extra_f4">Keerulised juhtumid inimestele</p>
+                    </div>
+                    <div class="case-chat-extra-card">
+                        <i class="fas fa-vial"></i>
+                        <h4>A/B testimine</h4>
+                        <p data-i18n="case_chat_extra_f5">Optimeerimine parimate vastuste leidmiseks</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Use cases -->
+            <section class="case-section">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_use">Rakendusalad</h2>
+                <div class="case-chat-use-grid">
+                    <div class="case-chat-use-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-i18n="case_chat_use_1">E-kaubandus – Tooteinfo, tellimused, tagastused</span>
+                    </div>
+                    <div class="case-chat-use-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <span data-i18n="case_chat_use_2">SaaS – Tehnilised küsimused, juhendid</span>
+                    </div>
+                    <div class="case-chat-use-card">
+                        <i class="fas fa-concierge-bell"></i>
+                        <span data-i18n="case_chat_use_3">Teenused – Broneeringud, hinnapakkumised</span>
+                    </div>
+                    <div class="case-chat-use-card">
+                        <i class="fas fa-handshake"></i>
+                        <span data-i18n="case_chat_use_4">B2B – Kvalifitseerimine, konsultatsioonid</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Investment & Timeline -->
+            <section class="case-section case-chat-invest">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_invest">Investeering</h2>
+                <p data-i18n="case_chat_invest_p">Sõltuvalt funktsionaalsuse ulatusest:</p>
+                <div class="case-chat-pricing-grid">
+                    <div class="case-chat-price-card">
+                        <h4>Baas</h4>
+                        <span class="case-chat-price-card__amount">€3,000+</span>
+                        <p data-i18n="case_chat_price1">Põhifunktsionaalsus</p>
+                    </div>
+                    <div class="case-chat-price-card case-chat-price-card--popular">
+                        <span class="case-chat-price-card__badge">POPULAARNE</span>
+                        <h4>Standard</h4>
+                        <span class="case-chat-price-card__amount">€5,000–8,000</span>
+                        <p data-i18n="case_chat_price2">CRM, analüütika</p>
+                    </div>
+                    <div class="case-chat-price-card">
+                        <h4>Premium</h4>
+                        <span class="case-chat-price-card__amount">€10,000+</span>
+                        <p data-i18n="case_chat_price3">Täisfunktsionaalsus</p>
+                    </div>
+                </div>
+                <p class="case-chat-monthly" data-i18n="case_chat_monthly">Kuukulud: €50–300</p>
+            </section>
+
+            <section class="case-section case-chat-timeline">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_impl">Juurutamise aeg</h2>
+                <div class="case-chat-timeline__visual">
+                    <div class="case-chat-timeline__phase">
+                        <span class="case-chat-timeline__week">1–2 näd</span>
+                        <h4>Seadistamine</h4>
+                        <p data-i18n="case_chat_impl_1">Lihtne lahendus</p>
+                    </div>
+                    <div class="case-chat-timeline__line"></div>
+                    <div class="case-chat-timeline__phase">
+                        <span class="case-chat-timeline__week">3–6 näd</span>
+                        <h4>Täissüsteem</h4>
+                        <p data-i18n="case_chat_impl_2">Täisfunktsionaalne</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion & CTA -->
+            <section class="case-section">
+                <h2 class="case-chat-section__title" data-i18n="case_chat_conclusion">Järeldus</h2>
+                <p data-i18n="case_chat_conclusion_p">AI vestlusrobot ei ole lihtsalt FAQ automatiseerimine – see on intelligentne virtuaalne assistent, kes töötab 24/7, õpib pidevalt ja muutub teie ettevõtte kõige efektiivsemaks klienditoe töötajaks.</p>
+            </section>
+
+            <section class="case-chat-cta">
+                <h2 class="case-chat-cta__title" data-i18n="case_chat_cta_title">Valmis automatiseerima klienditeenindust?</h2>
+                <p class="case-chat-cta__sub" data-i18n="case_chat_cta_sub">Saage tasuta analüüs ja personaalne strateegia.</p>
+                <p class="case-chat-cta__trust" data-i18n="case_chat_cta_trust">✓ Vastame 24 tunni jooksul</p>
+                <a href="index.html#contact" class="btn btn-primary case-chat-cta__btn" data-i18n="about_cta_touch">Võta ühendust</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_copyright">&copy; 2026 Digital Transformation Solutions.</p>
+            <div class="footer-business-info">
+                <div class="business-info-item company-name"><span class="info-value">DESIGNLYTICS OÜ</span></div>
+                <div class="business-info-item"><span class="info-label" data-i18n="footer_reg">Reg. num:</span> <span class="info-value">17218418</span></div>
+                <div class="business-info-item"><span class="info-label">Email:</span> <a href="mailto:dmitri.gornakov@gmail.com" class="info-value">dmitri.gornakov@gmail.com</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

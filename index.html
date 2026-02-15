@@ -32,34 +32,142 @@
                 </a>
             </div>
             <ul>
+                <li><a href="#why">Why Me</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Clients</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="cash-hero">
+    <section class="cash-hero cash-hero--tabs">
         <div class="container">
-            <h1 class="cash-hero__title">Fix Your WooCommerce. Increase Conversions. Launch Fast.</h1>
-            <p class="cash-hero__lead">I help businesses fix broken stores, integrate APIs and design high-converting pages — in days, not months.</p>
-            <ul class="cash-hero__checks">
-                <li><i class="fas fa-check"></i> 48h bug fixes</li>
-                <li><i class="fas fa-check"></i> 7-day landing pages</li>
-                <li><i class="fas fa-check"></i> API integrations without chaos</li>
-            </ul>
-            <div class="cash-hero__buttons">
-                <a href="#contact" class="btn btn-primary cash-btn">Start a Paid Project</a>
-                <a href="#contact" class="btn btn-secondary cash-btn" data-audit="true">Get UX Audit – €297</a>
+            <h1 class="cash-hero__title">From idea to production in 7–21 days</h1>
+            <p class="cash-hero__lead">Full-stack development + Premium design</p>
+            <p class="cash-hero__tabs-label">Choose your case:</p>
+            <div class="cash-hero__tabs" id="heroTabs" data-active="0">
+                <button type="button" class="cash-hero__tab active" data-tab="woo" data-index="0"><i class="fas fa-shopping-cart cash-hero__tab-icon"></i><span class="cash-hero__tab-text">WooCommerce</span></button>
+                <button type="button" class="cash-hero__tab" data-tab="web" data-index="1"><i class="fas fa-laptop-code cash-hero__tab-icon"></i><span class="cash-hero__tab-text">Web Apps</span></button>
+                <button type="button" class="cash-hero__tab" data-tab="design" data-index="2"><i class="fas fa-palette cash-hero__tab-icon"></i><span class="cash-hero__tab-text">Design Systems</span></button>
             </div>
-            <p class="cash-hero__note">50% upfront. Clear scope. No "partnership later".</p>
+
+            <div class="cash-hero__panels">
+                <div class="cash-hero__panel active" data-panel="woo">
+                    <div class="cash-hero__panel-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="cash-hero__panel-title">WooCommerce Fix & Optimization</h3>
+                    <p class="cash-hero__panel-problem">Your store loses at least €500 every day:</p>
+                    <ul class="cash-hero__panel-list cash-hero__panel-list--problem">
+                        <li>Checkout bugs (30% lost sales)</li>
+                        <li>Slow loading (every second = -7% conversion)</li>
+                        <li>Payment failures (customers go to competitors)</li>
+                    </ul>
+                    <p class="cash-hero__panel-do"><i class="fas fa-check"></i> What I'll do:</p>
+                    <ul class="cash-hero__panel-list cash-hero__panel-list--check">
+                        <li>Fix all critical bugs in 48 hours</li>
+                        <li>Speed up loading to 0.8 seconds</li>
+                        <li>Set up payments with 99.9% uptime</li>
+                        <li>Create perfect mobile UX</li>
+                    </ul>
+                    <div class="cash-hero__panel-result-box">
+                        <div class="cash-hero__panel-result-icon"><i class="fas fa-chart-line"></i></div>
+                        <p class="cash-hero__panel-result-text"><strong>Result:</strong> +67% conversion | +€14,000 revenue/month. ROI in 4–8 weeks.</p>
+                    </div>
+                </div>
+
+                <div class="cash-hero__panel" data-panel="web">
+                    <div class="cash-hero__panel-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="cash-hero__panel-title">Full-Stack Web Development</h3>
+                    <p class="cash-hero__panel-problem">Your business wastes 15+ hours per week on manual work:</p>
+                    <ul class="cash-hero__panel-list cash-hero__panel-list--problem">
+                        <li>Manual processing of requests (can be automated)</li>
+                        <li>No integrations between systems (losing data)</li>
+                        <li>Slow backend (users leave)</li>
+                    </ul>
+                    <p class="cash-hero__panel-do"><i class="fas fa-check"></i> What I'll do:</p>
+                    <ul class="cash-hero__panel-list cash-hero__panel-list--check">
+                        <li>Build web app from scratch or improve existing</li>
+                        <li>Set up automation via APIs and bots</li>
+                        <li>Optimize backend (React/Node.js/PHP)</li>
+                        <li>Integrate with CRM, payments, email services</li>
+                    </ul>
+                    <div class="cash-hero__panel-result-box">
+                        <div class="cash-hero__panel-result-icon"><i class="fas fa-chart-line"></i></div>
+                        <p class="cash-hero__panel-result-text"><strong>Result:</strong> 15+ hours saved per week | -80% manual work. ROI in 6–12 weeks.</p>
+                    </div>
+                </div>
+
+                <div class="cash-hero__panel" data-panel="design">
+                    <div class="cash-hero__panel-icon"><i class="fas fa-palette"></i></div>
+                    <h3 class="cash-hero__panel-title">Premium Design & Branding</h3>
+                    <p class="cash-hero__panel-problem">Your product looks like it's from 2010:</p>
+                    <ul class="cash-hero__panel-list cash-hero__panel-list--problem">
+                        <li>Low trust from clients (unprofessional look)</li>
+                        <li>High maintenance costs (chaos in interfaces)</li>
+                        <li>Not memorable (no brand identity)</li>
+                    </ul>
+                    <p class="cash-hero__panel-do"><i class="fas fa-check"></i> What I'll do:</p>
+                    <ul class="cash-hero__panel-list cash-hero__panel-list--check">
+                        <li>Create premium design by all UX/UI standards</li>
+                        <li>Develop brand identity (logo, colors, fonts)</li>
+                        <li>Build design system for scaling</li>
+                        <li>Adaptive layout (desktop, tablet, mobile)</li>
+                    </ul>
+                    <div class="cash-hero__panel-result-box">
+                        <div class="cash-hero__panel-result-icon"><i class="fas fa-chart-line"></i></div>
+                        <p class="cash-hero__panel-result-text"><strong>Result:</strong> +180% conversion | 3x more requests. Premium perception = higher prices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cash-hero__buttons">
+                <a href="#contact" class="btn btn-primary cash-btn cash-btn--primary" data-audit="true">
+                    Get Free Audit
+                    <span class="cash-btn__badge">15-min</span>
+                </a>
+                <a href="#testimonials" class="btn btn-secondary cash-btn">View Cases</a>
+                <a href="#contact" class="btn btn-secondary cash-btn">Start Project</a>
+            </div>
+            <p class="cash-hero__note">I'll show you what's broken and how to fix it. No credit card required.</p>
+            <p class="cash-hero__trust-badges">✓ 48h response &nbsp;•&nbsp; 💯 Money-back guarantee &nbsp;•&nbsp; ✓ No outsourcing &nbsp;•&nbsp; 🔒 NDA available</p>
+        </div>
+    </section>
+
+    <!-- Why Trust Me -->
+    <section class="cash-why" id="why">
+        <div class="container">
+            <h2 class="cash-why__title">Why Trust Me With Your Business?</h2>
+            <div class="cash-why__card">
+                <img src="img/avatar-1.jpg" alt="Dmitri" class="cash-why__photo">
+                <div class="cash-why__content">
+                    <h3 class="cash-why__greeting">Hi, I'm Dmitri</h3>
+                    <p class="cash-why__tagline">Solo developer from Tallinn. I don't outsource. I don't promise "partnerships later". I just deliver results.</p>
+                    <ul class="cash-why__list">
+                        <li><i class="fas fa-check"></i> 30+ projects delivered on time</li>
+                        <li><i class="fas fa-check"></i> 94% clients return for more</li>
+                        <li><i class="fas fa-check"></i> Average: +67% conversion</li>
+                        <li><i class="fas fa-check"></i> Money-back guarantee</li>
+                    </ul>
+                    <div class="cash-why__links">
+                        <a href="https://linkedin.com/in/dmitri-gornakov" target="_blank" rel="noopener" class="cash-why__link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/visual_sense" target="_blank" rel="noopener" class="cash-why__link"><i class="fab fa-telegram"></i></a>
+                        <a href="about.html" class="cash-why__link"><i class="fas fa-user"></i> About</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services -->
     <section class="cash-services" id="services">
         <div class="container">
+            <header class="cash-services__header">
+                <h2 class="cash-services__title">What I Do</h2>
+                <p class="cash-services__sub">Full-stack development + premium design. Pick one or combine for maximum impact.</p>
+            </header>
             <article class="cash-card">
+                <div class="cash-card__icon"><i class="fas fa-shopping-cart"></i></div>
                 <h2 class="cash-card__title">WooCommerce Fix & Optimization</h2>
                 <p class="cash-card__price">€450 – €700 | 2–3 days</p>
                 <p class="cash-card__desc">Checkout errors, broken plugins, slow store, payment issues. I diagnose and fix critical problems fast.</p>
@@ -73,6 +181,7 @@
             </article>
 
             <article class="cash-card">
+                <div class="cash-card__icon"><i class="fas fa-plug"></i></div>
                 <h2 class="cash-card__title">WooCommerce API Integration</h2>
                 <p class="cash-card__price">From €900 | 5–10 days</p>
                 <p class="cash-card__desc">Connect your store to CRM, ERP, vendor systems or marketplaces.</p>
@@ -86,6 +195,52 @@
             </article>
 
             <article class="cash-card">
+                <div class="cash-card__icon"><i class="fas fa-laptop-code"></i></div>
+                <h2 class="cash-card__title">Full-Stack Development</h2>
+                <p class="cash-card__price">€1.5k – €5k | 14–21 days</p>
+                <p class="cash-card__desc">From concept to production-ready web application with automation and integrations.</p>
+                <ul class="cash-card__list">
+                    <li><i class="fas fa-check"></i> Custom web apps (React, Node.js, PHP)</li>
+                    <li><i class="fas fa-check"></i> Automation & API integrations</li>
+                    <li><i class="fas fa-check"></i> Database design & optimization</li>
+                    <li><i class="fas fa-check"></i> Admin panels & dashboards</li>
+                </ul>
+                <div class="cash-card__tech"><span>React</span><span>Node.js</span><span>PHP</span><span>MySQL</span></div>
+                <a href="#contact" class="btn btn-primary cash-card__cta">Build My App</a>
+            </article>
+
+            <article class="cash-card">
+                <div class="cash-card__icon"><i class="fas fa-palette"></i></div>
+                <h2 class="cash-card__title">Premium Design & Branding</h2>
+                <p class="cash-card__price">€1.2k – €3.5k | 7–14 days</p>
+                <p class="cash-card__desc">Transform your product from generic to memorable with world-class design.</p>
+                <ul class="cash-card__list">
+                    <li><i class="fas fa-check"></i> UX/UI design (Figma → Production)</li>
+                    <li><i class="fas fa-check"></i> Branding & visual identity</li>
+                    <li><i class="fas fa-check"></i> Landing pages & marketing sites</li>
+                    <li><i class="fas fa-check"></i> Design system documentation</li>
+                </ul>
+                <div class="cash-card__tech"><span>Figma</span><span>Tailwind</span><span>React</span></div>
+                <a href="#contact" class="btn btn-primary cash-card__cta">Design My Product</a>
+            </article>
+
+            <article class="cash-card">
+                <div class="cash-card__icon"><i class="fas fa-th-large"></i></div>
+                <h2 class="cash-card__title">Design Systems</h2>
+                <p class="cash-card__price">€2k – €6k | 14–21 days</p>
+                <p class="cash-card__desc">Scalable design infrastructure for growing products and teams.</p>
+                <ul class="cash-card__list">
+                    <li><i class="fas fa-check"></i> Component library & documentation</li>
+                    <li><i class="fas fa-check"></i> Design tokens (colors, spacing, typography)</li>
+                    <li><i class="fas fa-check"></i> Reusable UI patterns & guidelines</li>
+                    <li><i class="fas fa-check"></i> Accessibility standards (WCAG)</li>
+                </ul>
+                <div class="cash-card__tech"><span>Figma</span><span>Storybook</span><span>React</span></div>
+                <a href="#contact" class="btn btn-primary cash-card__cta">Build My System</a>
+            </article>
+
+            <article class="cash-card">
+                <div class="cash-card__icon"><i class="fas fa-window-maximize"></i></div>
                 <h2 class="cash-card__title">Landing Page Design & Build</h2>
                 <p class="cash-card__price">€900 – €1400 | 5–7 days</p>
                 <p class="cash-card__desc">Structure, UX, design and build — ready for ads or product launch.</p>
@@ -98,9 +253,27 @@
                 <a href="#contact" class="btn btn-primary cash-card__cta">Launch Landing Page</a>
             </article>
 
+            <article class="cash-card cash-card--featured">
+                <div class="cash-card__badge">⚡ Most Popular</div>
+                <div class="cash-card__icon"><i class="fas fa-rocket"></i></div>
+                <h2 class="cash-card__title">Full-Stack + Design</h2>
+                <p class="cash-card__price">€3k – €10k | 14–30 days</p>
+                <p class="cash-card__desc">The complete package. From initial concept to fully-launched product.</p>
+                <ul class="cash-card__list">
+                    <li><i class="fas fa-check"></i> Technical architecture + Premium design</li>
+                    <li><i class="fas fa-check"></i> Full-stack development + Frontend</li>
+                    <li><i class="fas fa-check"></i> API integrations & automation</li>
+                    <li><i class="fas fa-check"></i> Branding & design system</li>
+                    <li><i class="fas fa-check"></i> 30 days support included</li>
+                </ul>
+                <div class="cash-card__tech"><span>React</span><span>Node.js</span><span>Figma</span><span>API</span></div>
+                <a href="#contact" class="btn btn-primary cash-card__cta">Launch My Product</a>
+            </article>
+
             <article class="cash-card cash-card--audit">
+                <div class="cash-card__icon"><i class="fas fa-search-dollar"></i></div>
                 <h2 class="cash-card__title">UX & Conversion Audit</h2>
-                <p class="cash-card__price">€297 | 2–3 days</p>
+                <p class="cash-card__price">€159 | 2–3 days</p>
                 <p class="cash-card__desc">Get a clear breakdown of what's blocking your sales.</p>
                 <ul class="cash-card__list">
                     <li><i class="fas fa-check"></i> Funnel analysis</li>
@@ -113,10 +286,167 @@
         </div>
     </section>
 
+    <!-- How I Work -->
+    <section class="cash-process">
+        <div class="container">
+            <h2 class="cash-process__title">How I Work (No BS, No Surprises)</h2>
+            <div class="cash-process__timeline">
+                <div class="cash-process__phase">
+                    <div class="cash-process__phase-header"><span class="cash-process__phase-num">1</span> Day 1–2: Deep Dive</div>
+                    <ul class="cash-process__phase-list">
+                        <li>I audit your store/app</li>
+                        <li>Find all critical issues</li>
+                        <li>Create fix plan with timeline</li>
+                    </ul>
+                </div>
+                <div class="cash-process__phase">
+                    <div class="cash-process__phase-header"><span class="cash-process__phase-num">2</span> Day 3–14: Development</div>
+                    <ul class="cash-process__phase-list">
+                        <li>Daily progress updates via Telegram</li>
+                        <li>You see work in real-time (staging)</li>
+                        <li>Unlimited revisions until you're happy</li>
+                    </ul>
+                </div>
+                <div class="cash-process__phase">
+                    <div class="cash-process__phase-header"><span class="cash-process__phase-num">3</span> Day 15: Launch</div>
+                    <ul class="cash-process__phase-list">
+                        <li>Deploy to production</li>
+                        <li>Full documentation</li>
+                        <li>30 days support included</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cash-process__guarantee">
+                <p><strong>Payment:</strong> 50% start, 50% on delivery</p>
+                <p><strong>Guarantee:</strong> Full refund if not satisfied</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="cash-testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="cash-testimonials__title">Happy Clients</h2>
+            <p class="cash-testimonials__sub">Real results from real businesses</p>
+            <div class="cash-testimonials__grid">
+                <article class="cash-testimonial">
+                    <a href="https://viktorijaautokool.ee/" target="_blank" rel="noopener" class="cash-testimonial__screenshot">
+                        <img src="img/viktorija-main.jpg" alt="Viktorija Autokool website">
+                    </a>
+                    <div class="cash-testimonial__header">
+                        <img src="img/viktorija-driving.png" alt="Viktorijaautokool" class="cash-testimonial__logo">
+                        <div>
+                            <span class="cash-testimonial__client">Viktorija Autokool</span>
+                            <span class="cash-testimonial__type">Driving School</span>
+                        </div>
+                    </div>
+                    <blockquote class="cash-testimonial__quote">"I used to spend 3 hours a day on calls and manual bookings. Now the bot does it for me and payments come in automatically. Love it!"</blockquote>
+                    <p class="cash-testimonial__author">— Igor Nagorski, driving school owner</p>
+                    <ul class="cash-testimonial__results">
+                        <li><i class="fas fa-chart-line"></i> +180% online bookings in 2 months</li>
+                        <li><i class="fas fa-credit-card"></i> 40% payments now online (was 0%)</li>
+                        <li><i class="fas fa-clock"></i> 15+ hours saved per week</li>
+                    </ul>
+                    <p class="cash-testimonial__meta">18 days · €1,400</p>
+                    <a href="https://viktorijaautokool.ee/" target="_blank" rel="noopener" class="cash-testimonial__link">View site <i class="fas fa-external-link-alt"></i></a>
+                </article>
+
+                <article class="cash-testimonial">
+                    <a href="https://fireproof.ee/" target="_blank" rel="noopener" class="cash-testimonial__screenshot">
+                        <img src="img/fireproof-main.jpg" alt="Fireproof.ee website">
+                    </a>
+                    <div class="cash-testimonial__header">
+                        <img src="img/fire-proof.svg" alt="Fireproof.ee" class="cash-testimonial__logo">
+                        <div>
+                            <span class="cash-testimonial__client">Fireproof.ee</span>
+                            <span class="cash-testimonial__type">Fire Safety Works</span>
+                        </div>
+                    </div>
+                    <blockquote class="cash-testimonial__quote">"Clients now say: 'You look like a serious European company'. We never heard that before."</blockquote>
+                    <p class="cash-testimonial__author">— Nikolai Nedvedski, CEO @ Fireproof.ee</p>
+                    <ul class="cash-testimonial__results">
+                        <li><i class="fas fa-chart-line"></i> 3x more inquiries from the site</li>
+                        <li><i class="fas fa-user-check"></i> +65% lead quality</li>
+                        <li><i class="fas fa-bolt"></i> 0.8s load time (was 4+ sec)</li>
+                    </ul>
+                    <p class="cash-testimonial__meta">14 days · €2,100</p>
+                    <a href="https://fireproof.ee/" target="_blank" rel="noopener" class="cash-testimonial__link">View site <i class="fas fa-external-link-alt"></i></a>
+                </article>
+
+                <article class="cash-testimonial">
+                    <a href="https://www.safunkband.ee/" target="_blank" rel="noopener" class="cash-testimonial__screenshot">
+                        <img src="img/safb-main.jpg" alt="Safunkband.ee website">
+                    </a>
+                    <div class="cash-testimonial__header">
+                        <img src="img/safb.png" alt="Safunkband.ee" class="cash-testimonial__logo">
+                        <div>
+                            <span class="cash-testimonial__client">Safunkband.ee</span>
+                            <span class="cash-testimonial__type">Artist / Musician</span>
+                        </div>
+                    </div>
+                    <blockquote class="cash-testimonial__quote">"Bro, this is fire! I just share the link and promoters instantly get the level. The site is as tight as my solos!"</blockquote>
+                    <p class="cash-testimonial__author">— Sten Valdmaa, musician</p>
+                    <ul class="cash-testimonial__results">
+                        <li><i class="fas fa-music"></i> +240% booking requests in 3 months</li>
+                        <li><i class="fas fa-euro-sign"></i> Higher fee per gig</li>
+                        <li><i class="fas fa-globe"></i> Inquiries from Finland, Latvia, Lithuania</li>
+                    </ul>
+                    <p class="cash-testimonial__meta">9 days · €900</p>
+                    <a href="https://www.safunkband.ee/" target="_blank" rel="noopener" class="cash-testimonial__link">View site <i class="fas fa-external-link-alt"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Not Another Agency -->
+    <section class="cash-anti">
+        <div class="container">
+            <h2 class="cash-anti__title">Not Another Agency Promising the Moon</h2>
+            <div class="cash-anti__grid">
+                <div class="cash-anti__col cash-anti__col--no">
+                    <h4>❌ What I don't do</h4>
+                    <ul>
+                        <li>No "we have 100 developers" (it's just me)</li>
+                        <li>No "partnership later" bullshit</li>
+                        <li>No outsourcing to India</li>
+                        <li>No disappearing after payment</li>
+                    </ul>
+                </div>
+                <div class="cash-anti__col cash-anti__col--yes">
+                    <h4>✅ What you get</h4>
+                    <ul>
+                        <li>Solo developer, personal attention</li>
+                        <li>Clear pricing, clear timeline</li>
+                        <li>Daily updates via Telegram</li>
+                        <li>You own the code, forever</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Block -->
     <section class="cash-trust">
         <div class="container">
-            <p class="cash-trust__lead">Worked with 30+ businesses. Focused on results, not theory.</p>
+            <h2 class="cash-trust__title">Numbers that speak for themselves</h2>
+            <div class="cash-trust__stats">
+                <div class="cash-trust__stat">
+                    <span class="cash-trust__stat-value">30+</span>
+                    <span class="cash-trust__stat-label">projects</span>
+                </div>
+                <div class="cash-trust__stat">
+                    <span class="cash-trust__stat-value">€430k</span>
+                    <span class="cash-trust__stat-label">revenue generated</span>
+                </div>
+                <div class="cash-trust__stat">
+                    <span class="cash-trust__stat-value">94%</span>
+                    <span class="cash-trust__stat-label">satisfied clients</span>
+                </div>
+                <div class="cash-trust__stat">
+                    <span class="cash-trust__stat-value">7–21</span>
+                    <span class="cash-trust__stat-label">days delivery</span>
+                </div>
+            </div>
             <ul class="cash-trust__list">
                 <li><i class="fas fa-check"></i> Clear pricing</li>
                 <li><i class="fas fa-check"></i> Clear deadlines</li>
@@ -125,53 +455,84 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="cash-faq">
+        <div class="container">
+            <h2 class="cash-faq__title">Frequently Asked</h2>
+            <div class="cash-faq__list">
+                <details class="cash-faq__item">
+                    <summary>How do I know you won't disappear?</summary>
+                    <p>I've been in Tallinn for years. Check my LinkedIn, GitHub, past clients. Escrow payment available.</p>
+                </details>
+                <details class="cash-faq__item">
+                    <summary>What if I'm not satisfied?</summary>
+                    <p>Full refund, no questions asked. I also offer free revisions until you're happy.</p>
+                </details>
+                <details class="cash-faq__item">
+                    <summary>Can you work with my timezone?</summary>
+                    <p>I'm in EET (GMT+2) but flexible. Daily updates via Telegram, calls when needed.</p>
+                </details>
+                <details class="cash-faq__item">
+                    <summary>Do you outsource?</summary>
+                    <p>Never. It's just me. You get my full attention.</p>
+                </details>
+                <details class="cash-faq__item">
+                    <summary>How fast can you start?</summary>
+                    <p>Usually within 48 hours. I take only 3 clients per month to maintain quality.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="cash-cta" id="contact">
         <div class="container">
             <h2 class="cash-cta__title">Need results this month?</h2>
             <p class="cash-cta__sub">Let's define scope, confirm price and start immediately.</p>
-            <a href="#contact-form" class="btn btn-primary cash-cta__btn">Book Paid Consultation</a>
+            <p class="cash-cta__guarantee">💯 <strong>Money-Back Guarantee</strong> — If I don't deliver results, you get a full refund. No questions asked.</p>
+            <a href="#contact-form" class="btn btn-primary cash-cta__btn">Get Free Audit</a>
         </div>
     </section>
 
     <!-- Contact Form -->
     <section class="cash-form-section" id="contact-form">
         <div class="container">
-            <form id="contactForm" class="cash-form">
-                <div class="cash-form__row">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Smith" required>
-                    </div>
+            <div class="cash-form-card">
+                <h2 class="cash-form__title">Get Free Audit</h2>
+                <p class="cash-form__subtitle">15-minute call. I'll show you what's broken.</p>
+
+                <form id="contactForm" class="cash-form">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="john@store.com" required>
                     </div>
+                    <div class="form-group">
+                        <label for="message">Store URL <span class="cash-form__optional">(optional)</span></label>
+                        <input type="url" id="message" name="message" placeholder="https://mystore.com">
+                    </div>
+                    <button type="submit" class="btn btn-primary cash-form__submit">
+                        <span class="btn-text">Get Free Audit</span>
+                        <span class="btn-loader" style="display: none;">Sending...</span>
+                    </button>
+                    <div id="formError" class="cash-form__error" style="display: none;"></div>
+                    <div id="formSuccess" class="cash-form__success" style="display: none;">
+                        <i class="fas fa-check-circle"></i> Received. I'll reply within 24h.
+                    </div>
+                </form>
+
+                <div class="cash-form__divider">
+                    <span class="cash-form__divider-text">Or message me directly</span>
                 </div>
-                <div class="form-group">
-                    <label for="service">What do you need?</label>
-                    <select id="service" name="service">
-                        <option value="">Select service</option>
-                        <option value="fix">WooCommerce Fix (€450–700)</option>
-                        <option value="api">API Integration (from €900)</option>
-                        <option value="landing">Landing Page (€900–1400)</option>
-                        <option value="audit">UX Audit (€297)</option>
-                        <option value="other">Other / Consultation</option>
-                    </select>
+
+                <div class="cash-form__quick-contact">
+                    <a href="https://t.me/visual_sense" target="_blank" rel="noopener" class="cash-form__quick-btn">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <a href="https://wa.me/37258976398" target="_blank" rel="noopener" class="cash-form__quick-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Store URL + what's broken (optional)</label>
-                    <textarea id="message" name="message" rows="3" placeholder="https://mystore.com — checkout errors, slow loading..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary cash-form__submit">
-                    <span class="btn-text">Send Request</span>
-                    <span class="btn-loader" style="display: none;">Sending...</span>
-                </button>
-                <div id="formError" class="cash-form__error" style="display: none;"></div>
-                <div id="formSuccess" class="cash-form__success" style="display: none;">
-                    <i class="fas fa-check-circle"></i> Received. I'll reply within 24h.
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -205,19 +566,17 @@
                 if (btnLoader) btnLoader.style.display = 'inline';
 
                 try {
-                    const name = document.getElementById('name').value.trim();
                     const email = document.getElementById('email').value.trim();
-                    const service = document.getElementById('service').value;
-                    const message = document.getElementById('message').value.trim();
+                    const storeUrl = document.getElementById('message').value.trim();
                     await emailjs.send(
                         'service_snhdf4s',
                         'template_l7z2zts',
                         {
-                            from_name: name,
+                            from_name: 'Free Audit Request',
                             from_email: email,
-                            business_name: service || 'Not specified',
+                            business_name: 'Free Audit',
                             reply_to: email,
-                            message: `Name: ${name}\nEmail: ${email}\nService: ${service || '—'}\n\n${message || '—'}`
+                            message: `Email: ${email}\nStore URL: ${storeUrl || '—'}`
                         }
                     );
                     formSuccess.style.display = 'flex';
@@ -240,6 +599,20 @@
                     e.preventDefault();
                     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
                 }
+            });
+        });
+
+        // Hero tabs (segmented control)
+        const heroTabs = document.getElementById('heroTabs');
+        document.querySelectorAll('.cash-hero__tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-tab');
+                const index = this.getAttribute('data-index');
+                document.querySelectorAll('.cash-hero__tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.cash-hero__panel').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelector(`.cash-hero__panel[data-panel="${target}"]`).classList.add('active');
+                if (heroTabs) heroTabs.setAttribute('data-active', index);
             });
         });
     </script>

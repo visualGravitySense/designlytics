@@ -1,0 +1,324 @@
+/* Cash Mode — conversion-focused landing */
+
+.cash-mode-page {
+    padding-top: 4rem;
+}
+
+.cash-mode-page nav ul {
+    gap: 1.5rem;
+}
+
+/* Hero */
+.cash-hero {
+    padding: 4rem 5% 5rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--primary) 0%, #0f0f1a 100%);
+    color: white;
+}
+
+.cash-hero .container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.cash-hero__title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.cash-hero__lead {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cash-hero__checks {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.cash-hero__checks li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cash-hero__checks i {
+    color: var(--accent);
+}
+
+.cash-hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cash-hero__buttons .btn {
+    padding: 0.85rem 1.75rem;
+    font-weight: 600;
+}
+
+.cash-hero__buttons .btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+    border: none;
+}
+
+.cash-hero__buttons .btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.cash-hero__buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.cash-hero__buttons .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.cash-hero__note {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+/* Services grid */
+.cash-services {
+    padding: 4rem 5%;
+}
+
+.cash-services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cash-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.cash-card__title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.cash-card__price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.cash-card__desc {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.cash-card__list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.cash-card__list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0;
+    font-size: 0.95rem;
+}
+
+.cash-card__list i {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.cash-card__cta {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+
+.cash-card--audit {
+    border: 2px solid var(--accent);
+}
+
+/* Trust block */
+.cash-trust {
+    padding: 3rem 5%;
+    background: var(--light);
+    text-align: center;
+}
+
+.cash-trust__lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cash-trust__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+}
+
+.cash-trust__list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cash-trust__list i {
+    color: var(--accent);
+}
+
+/* Final CTA */
+.cash-cta {
+    padding: 4rem 5%;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+}
+
+.cash-cta__title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.cash-cta__sub {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.cash-cta__btn {
+    background: var(--accent);
+    color: var(--primary);
+    padding: 0.9rem 2rem;
+    font-weight: 700;
+}
+
+.cash-cta__btn:hover {
+    background: var(--accent-hover);
+}
+
+/* Contact form */
+.cash-form-section {
+    padding: 4rem 5% 5rem;
+}
+
+.cash-form-section .container {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.cash-form {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.cash-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.cash-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.cash-form .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.cash-form input,
+.cash-form select,
+.cash-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.cash-form input:focus,
+.cash-form select:focus,
+.cash-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.cash-form__submit {
+    width: 100%;
+    padding: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.cash-form__error {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #fee;
+    color: #c00;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.cash-form__success {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #efe;
+    color: #080;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cash-form__success i {
+    color: var(--accent);
+}
+
+@media (max-width: 600px) {
+    .cash-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .cash-hero__buttons {
+        flex-direction: column;
+    }
+
+    .cash-hero__buttons .btn {
+        width: 100%;
+    }
+}
